@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>下载记录清理器</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <span class="title">下载记录清理器</span>
+      <span id="status" class="badge off">已停止</span>
+    </div>
+
+    <div id="countdown" class="countdown idle">--:--</div>
+    <div class="sub">剩余时间</div>
+
+    <div class="controls">
+      <label class="field">
+        <span class="field-label">每轮秒数</span>
+        <input id="seconds" type="number" min="1" step="1" value="60">
+      </label>
+    </div>
+
+    <button id="toggleBtn" class="btn start" type="button">启动</button>
+    <button id="cleanBtn" class="btn secondary" type="button">立即清理</button>
+
+    <div id="lastInfo" class="last-info">最近清理：—</div>
+    <div class="hint">仅清除下载记录，不删除磁盘文件</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
